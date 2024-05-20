@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <div class="section1">
+            <h1 class="titulo">Formulario de Inscripción</h1>
+        </div>
+    </header>
+    <main>
+        <div class="formulario">
+            <form action="https://formsubmit.co/fede.arrigone.96@gmail.com" method="POST">
+                <fieldset>
+                    <label for="nameField">Nombre</label>
+                    <input type="text" placeholder="Ingrese aquí su nombre" id="nameField" name="Nombre" required>
+                    <label for="apellidoField">Apellido</label>
+                    <input type="text" placeholder="Ingrese aquí su Apellido" id="apellidoField" name="Apellido" required>
+                    <label for="genderField">Genero</label>
+                    <div>
+                        <label class="checkbox-inline">
+                          <input type="radio" class="checkbox_1" value="Hombre" name="tipo"> Hombre 
+                        </label>
+                    </div>
+                    <div>
+                        <label class="checkbox-inline">
+                          <input type="radio" class="checkbox_1" value="Mujer" name="tipo"> Mujer
+                        </label>
+                    </div>
+                    <div>
+                        <label class="checkbox-inline">
+                            <input type="radio" class="checkbox_1" value="Otro" name="tipo"> Otro 
+                          </label>
+                    </div>
+                    <label for="dateField">Fecha de Nacimiento</label>
+                    <input type="date" id="dateField" name="Fecha de Nacimiento" required>
+                    <label for="adressField">Dirección</label>
+                    <input type="text" placeholder="Ingrese aquí su Dirección" id="adressField" name="Dirección" required>
+                    <label for="phonField">Teléfono</label>
+                    <input id="phonField" type="tel" pattern="^\d{2}\d{4}\d{4}$" name="Teléfono" placeholder="11-0000-0000" maxlength="10" minlength="10"  required >
+                    <label for="emailField">Email</label>
+                    <input type="email" placeholder="ejemplo@email.com" id="emailField" name="Email" required>
+                    <label for="passwordField">Contraseña <small>(Debe contener al menos un número, una letra mayúscula y minúscula, y al menos 8 o más caracteres )</small></label>
+                    <input type="password" id="passwordField" name="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres" required>
+            
+                    <label for="selectField">Nivel de Estudios:</label>
+                    <select name="Nivel de Estudio" id="selectField">
+                    <option>Otros</option>
+                    <option>Primario</option>
+                    <option>Secundario</option>
+                    <option>Terciario</option>
+                    <option>Universitario</option>
+                    </select>
+                    <label for="commentField">Comentario</label>
+                    <textarea placeholder="Ingrese aqui su comentario" id="commentField" name="textarea"></textarea>
+
+                    <div class="float-right">
+                        <input type="checkbox" id="confirmField" required>
+                        <label class="label-inline" for="confirmField">Aceptar terminos y condiciones</label>
+                      </div>
+                      <input class="button-primary" type="submit" value="Enviar">
+                    <input class="button-reset" type="reset" value="Borrar">
+                </fieldset>
+            </form> 
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
